@@ -40,6 +40,10 @@ class App extends Component {
     .catch(error => console.log('api errors:', error))
   }
 
+  componentDidMount() {
+    this.loginStatus()
+  }
+
   render() {
     return (
       <div>
