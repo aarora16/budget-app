@@ -96,7 +96,7 @@ class Signup extends Component {
           />
           <br></br>
           <input
-            placeholder="password confirmation"
+            placeholder="confirm password"
             type="password"
             name="password_confirmation"
             value={password_confirmation}
@@ -105,9 +105,9 @@ class Signup extends Component {
           <br></br>
         
           <button placeholder="submit" type="submit">
-            Sign Up
+            sign up
           </button>
-          
+
           or <Link to='/login'>login</Link>
       
         </form>

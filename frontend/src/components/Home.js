@@ -16,7 +16,7 @@ const Home = (props) => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar loggedInStatus={props.loggedInStatus} handleClick={handleClick} />
       <div>
         {
           props.loggedInStatus ?

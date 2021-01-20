@@ -100,7 +100,7 @@ class Login extends Component {
           />
           <br></br>
           <button placeholder="submit" type="submit">
-            Log In
+            log in
           </button>
           
           or <Link to='/signup'>sign up</Link>
