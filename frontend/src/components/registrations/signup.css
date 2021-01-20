@@ -2,10 +2,11 @@
   text-align: center;
 }
 
-input {
+form input {
   margin: 5px;
+  padding: 5px;
 }
 
-button {
+form button {
   margin: 5px;
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import Navbar from '../Navbar.js'
+import {Link} from 'react-router-dom'
+import './signup.css'
 
 class Signup extends Component {
   constructor(props) {
@@ -76,6 +78,7 @@ class Signup extends Component {
             value={username}
             onChange={this.handleChange}
           />
+          <br></br>
           <input
             placeholder="email"
             type="text"
@@ -83,6 +86,7 @@ class Signup extends Component {
             value={email}
             onChange={this.handleChange}
           />
+          <br></br>
           <input 
             placeholder="password"
             type="password"
@@ -90,6 +94,7 @@ class Signup extends Component {
             value={password}
             onChange={this.handleChange}
           />
+          <br></br>
           <input
             placeholder="password confirmation"
             type="password"
@@ -97,10 +102,13 @@ class Signup extends Component {
             value={password_confirmation}
             onChange={this.handleChange}
           />
+          <br></br>
         
           <button placeholder="submit" type="submit">
             Sign Up
           </button>
+          
+          or <Link to='/login'>login</Link>
       
         </form>
         <div>

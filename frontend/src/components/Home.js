@@ -18,9 +18,11 @@ const Home = (props) => {
     <div>
       <Navbar />
       <div>
-        <Link to='/login'>Log In</Link>
-        <br></br>
-        <Link to='/signup'>Sign Up</Link>
+        {
+          props.loggedInStatus ?
+          <div>Create A Budget</div> : 
+          <div>Please <Link to="/login">Login</Link> or <Link to="Signup">Signup</Link> </div>
+        }
         <br></br>
         {
           props.loggedInStatus ?

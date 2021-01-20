@@ -11,10 +11,10 @@ class NavBarComp extends Component {
   render() {
     return (
       <div class="nav">
-        <Navbar bg="dark" variant="dark">
+        <Navbar className="justify-content-between" bg="dark" variant="dark" >
           <Navbar.Brand>Budget App</Navbar.Brand>
-          <Nav className="mr-auto">
-            <Nav.Link href="Home">Home</Nav.Link>
+          <Nav>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="Login">Login</Nav.Link>
             <Nav.Link href="Signup">Signup</Nav.Link>
           </Nav>
