@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import './login.css'
+import Navbar from '../Navbar.js'
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -67,7 +70,9 @@ class Login extends Component {
     const {username, email, password} = this.state
 
   return (
-      <div>
+    <div>
+      <Navbar />
+      <div class="form">
         <h1>Log In</h1>
         <form onSubmit={this.handleSubmit}>
           <input
@@ -95,7 +100,7 @@ class Login extends Component {
             Log In
           </button>
           <div>
-           or <Link to='/signup'>sign up</Link>
+          or <Link to='/signup'>sign up</Link>
           </div>
           
         </form>
@@ -105,6 +110,7 @@ class Login extends Component {
           }
         </div>
       </div>
+    </div>
     );
   }
 }

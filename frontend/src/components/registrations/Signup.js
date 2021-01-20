@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import Navbar from '../Navbar.js'
 
 class Signup extends Component {
   constructor(props) {
@@ -63,7 +64,9 @@ class Signup extends Component {
     const {username, email, password, password_confirmation} = this.state
 
   return (
-      <div>
+    <div>
+      <Navbar />
+      <div class="form">
         <h1>Sign Up</h1>
        <form onSubmit={this.handleSubmit}>
           <input
@@ -106,6 +109,7 @@ class Signup extends Component {
           }
         </div>
       </div>
+    </div>
     );
   }
 }

@@ -5,6 +5,7 @@ import './App.css';
 import Home from './components/Home'
 import Login from './components/registrations/Login'
 import Signup from './components/registrations/Signup'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class App extends Component {
   componentDidMount() {
     this.loginStatus()
   }
-  
+
   render() {
     return (
       <div>
