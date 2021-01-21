@@ -18,6 +18,7 @@ class CreateBudgets < ActiveRecord::Migration[6.0]
       t.integer :debt
       t.integer :loans
       t.integer :clothing
+      t.boolean :featured
 
       t.timestamps
     end

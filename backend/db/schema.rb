@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2021_01_21_173108) do
     t.integer "debt"
     t.integer "loans"
     t.integer "clothing"
+    t.boolean "featured"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
