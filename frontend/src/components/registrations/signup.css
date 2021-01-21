@@ -12,7 +12,5 @@ form button {
 }
 
 .errors {
-  /* padding: 2%; */
-  color: red;
   text-align: left;
 }
