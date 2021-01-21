@@ -1,0 +1,2 @@
+class UserBudet < ApplicationRecord
+end
