@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import './login.css'
 import Navbar from '../Navbar.js'
+import Alert from 'react-bootstrap/Alert'
 
 class Login extends Component {
   constructor(props) {
@@ -56,12 +57,13 @@ class Login extends Component {
 
   handleErrors = () => {
     return (
-      <div>
-        <ul>
-        {this.state.errors.map(error => {
-        return <li key={error}>{error}</li>
-          })}
-        </ul>
+      <div class="errors">
+        <Alert variant="danger" className="m-3">
+          <Alert.Heading>Errors:</Alert.Heading>
+          { this.state.errors.map(error => {
+            return <p>{error}</p>
+          }) }
+        </Alert>
       </div>
     )
   }

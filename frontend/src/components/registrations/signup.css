@@ -10,3 +10,9 @@ form input {
 form button {
   margin: 5px;
 }
+
+.errors {
+  /* padding: 2%; */
+  color: red;
+  text-align: left;
+}

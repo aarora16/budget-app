@@ -26,7 +26,7 @@ class NavBarComp extends Component {
     }
 
     return (
-      <div class="fixed">
+      <div class="margin-bottom">
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand>Budget App</Navbar.Brand>
           <Nav className="mr-auto">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import Navbar from '../Navbar.js'
 import {Link} from 'react-router-dom'
+import Alert from 'react-bootstrap/Alert'
 import './signup.css'
 
 class Signup extends Component {
@@ -54,11 +55,14 @@ class Signup extends Component {
 
   handleErrors = () => {
     return (
-      <div>
-        <ul>{this.state.errors.map((error) => {
-          return <li key={error}>{error}</li>
-        })}
-        </ul> 
+      <div class="errors pt-3">
+        <Alert variant="danger" className="m-3">
+          <Alert.Heading>Errors:</Alert.Heading>
+          <hr />
+          { this.state.errors.map(error => {
+            return <p class="m-0">{error}</p>
+          }) }
+        </Alert>
       </div>
     )
   }
