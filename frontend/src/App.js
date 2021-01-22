@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import './App.css';
 import Home from './components/Home'
 import Login from './components/registrations/Login'
 import Signup from './components/registrations/Signup'
 import Create from './components/features/BudgetForm'
+import Show from './components/features/ShowBudget'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -76,6 +77,12 @@ class App extends Component {
               exact path='/create'
               render={props => (
               <Create {...props} loggedInStatus={this.state.isLoggedIn} />
+              )}
+            />
+            <Route 
+              path='/:id'
+              render={props => (
+              <Show {...props} loggedInStatus={this.state.isLoggedIn} />
               )}
             />
           </Switch>

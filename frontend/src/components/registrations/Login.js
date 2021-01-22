@@ -57,12 +57,12 @@ class Login extends Component {
 
   handleErrors = () => {
     return (
-      <div class="errors pt-3">
+      <div className="errors pt-3">
         <Alert variant="danger" className="m-3">
           <Alert.Heading>Errors:</Alert.Heading>
           <hr />
           { this.state.errors.map(error => {
-            return <p class="m-0">{error}</p>
+            return <p className="m-0">{error}</p>
           }) }
         </Alert>
       </div>

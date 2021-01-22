@@ -36,8 +36,8 @@ class Home extends Component {
       return (
         <>
           {budgets.map(budget => (
-            <div>
-              <BudgetCard key={budget.id} budget={budget} />
+            <div key={budget.id}>
+              <BudgetCard budget={budget} />
             </div>
           ))}
         </>
