@@ -1,4 +1,4 @@
-class UserBudet < ApplicationRecord
+class UserBudget < ApplicationRecord
   belongs_to :user
   belongs_to :budget 
 end
