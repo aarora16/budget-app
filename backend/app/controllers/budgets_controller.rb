@@ -45,6 +45,7 @@ class BudgetsController < ApplicationController
   private
     def budget_params
       params.require(:budget).permit(
+        :name,
         :salary, 
         :passive_income, 
         :rent_or_mortgage,

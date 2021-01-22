@@ -14,11 +14,9 @@ class Home extends Component {
     axios.get('http://localhost:3001/budgets', {withCredentials: true})
     .then(res => {
       res.data.budgets.forEach(budget => {
-        if (budget.featured) {
-          this.setState({
-            budgets: [...this.state.budgets, budget]
-          })
-        }
+        this.setState({
+          budgets: [...this.state.budgets, budget]
+        })
       })
     })
     .catch(error => console.log('api errors: ', error))
@@ -34,29 +32,12 @@ class Home extends Component {
       .catch(error => console.log(error))
     }
 
-    const getFeaturedBudgets = () => {
-
-    }
-
-    const returnFeaturedBudgets = (budgets) => {
-      return (
-        <div>
-          {budgets.map((budget) => (
-            <div key={budget}>
-              {budget}
-            </div>
-          ))}
-        </div>
-      )
-    }
-
     const test = (budgets) => {
-      console.log(budgets)
       return (
         <>
           {budgets.map(budget => (
             <div>
-              <BudgetCard budget={budget} />
+              <BudgetCard key={budget.id} budget={budget} />
             </div>
           ))}
         </>
@@ -70,10 +51,13 @@ class Home extends Component {
           {
             !this.props.loggedInStatus ?
             <div>Please <Link to="/login">Login</Link> or <Link to="Signup">Signup</Link></div> : 
-            <div className="carousel">
-              {
-                test(this.state.budgets)
-              }
+            <div>
+              <div>
+                {
+                  test(this.state.budgets)
+                }
+              </div>
+              <Link to="/create">Create A Budget</Link>
             </div>
           }
         </div>

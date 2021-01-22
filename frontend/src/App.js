@@ -5,6 +5,7 @@ import './App.css';
 import Home from './components/Home'
 import Login from './components/registrations/Login'
 import Signup from './components/registrations/Signup'
+import Create from './components/features/BudgetForm'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -69,6 +70,12 @@ class App extends Component {
               exact path='/signup' 
               render={props => (
               <Signup {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>
+              )}
+            />
+            <Route
+              exact path='/create'
+              render={props => (
+              <Create {...props} loggedInStatus={this.state.isLoggedIn} />
               )}
             />
           </Switch>
