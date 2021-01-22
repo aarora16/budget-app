@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 featured_budgets = [
   {
+    name: 'Example High',
     salary: 6000,
     passive_income: 1000,
     rent_or_mortgage: 1500,
@@ -27,6 +28,7 @@ featured_budgets = [
     featured: true
   },
   {
+    name: 'Example Medium',
     salary: 4000,
     passive_income: 0,
     rent_or_mortgage: 1000,
@@ -47,6 +49,7 @@ featured_budgets = [
     featured: true
   },
   {
+    name: 'Example Low',
     salary: 3000,
     passive_income: 200,
     rent_or_mortgage: 600,

@@ -75,7 +75,7 @@ class Login extends Component {
   return (
     <div>
       <Navbar />
-      <div class="form">
+      <div className="form">
         <h1>Log In</h1>
         <form onSubmit={this.handleSubmit}>
           <input

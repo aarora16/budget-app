@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_01_21_173108) do
   enable_extension "plpgsql"
 
   create_table "budgets", force: :cascade do |t|
+    t.string "name"
     t.integer "salary"
     t.integer "passive_income"
     t.integer "rent_or_mortgage"

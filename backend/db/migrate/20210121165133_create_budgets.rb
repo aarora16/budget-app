@@ -1,6 +1,7 @@
 class CreateBudgets < ActiveRecord::Migration[6.0]
   def change
     create_table :budgets do |t|
+      t.string :name
       t.integer :salary
       t.integer :passive_income
       t.integer :rent_or_mortgage
