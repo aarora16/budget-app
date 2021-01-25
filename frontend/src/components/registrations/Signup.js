@@ -74,7 +74,7 @@ class Signup extends Component {
       <Navbar />
       <div className="form">
         <h1>Sign Up</h1>
-       <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <input
             placeholder="username"
             type="text"
@@ -108,18 +108,19 @@ class Signup extends Component {
           />
           <br></br>
         
-          <button placeholder="submit" type="submit">
-            sign up
-          </button>
+          <div className="buttons">
+            <button placeholder="submit" type="submit">
+              sign up
+            </button>
 
-          or <Link to='/login'>login</Link>
-      
+            or <Link to='/login'>login</Link>
+          </div>
         </form>
-        <div>
-          {
-            this.state.errors ? this.handleErrors() : null
-          }
-        </div>
+      </div>
+      <div>
+        {
+          this.state.errors ? this.handleErrors() : null
+        }
       </div>
     </div>
     );

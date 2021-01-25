@@ -102,18 +102,20 @@ class Login extends Component {
             onChange={this.handleChange}
           />
           <br></br>
-          <button placeholder="submit" type="submit">
-            log in
-          </button>
-          
-          or <Link to='/signup'>sign up</Link>
+          <div className="buttons">
+            <button placeholder="submit" type="submit">
+              log in
+            </button>
+            
+            or <Link to='/signup'>sign up</Link>
+          </div>
           
         </form>
-        <div>
-          {
-            this.state.errors ? this.handleErrors() : null
-          }
-        </div>
+      </div>
+      <div>
+        {
+          this.state.errors ? this.handleErrors() : null
+        }
       </div>
     </div>
     );

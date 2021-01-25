@@ -1,13 +1,28 @@
 .form {
   text-align: center;
+  width: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.form h1 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 form input {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   margin: 5px;
   padding: 5px;
 }
 
 form button {
   margin: 5px;
+}
+
+.buttons {
+  text-align: center;
 }

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :user_budets
+  resources :user_budgets
   resources :budgets
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

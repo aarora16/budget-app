@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useReducer } from 'react';
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import Navbar from './Navbar.js'
@@ -48,16 +48,23 @@ class Home extends Component {
       <div>
         <Navbar loggedInStatus={this.props.loggedInStatus} handleClick={handleClick} />
         <div>
+          <h2 className="heading m-3">
+            Welcome User!
+          </h2>
+
           {
             !this.props.loggedInStatus ?
-            <div>Please <Link to="/login">Login</Link> or <Link to="Signup">Signup</Link></div> : 
+            <p className="m-3">Please <Link to="/login">Login</Link> or <Link to="Signup">Signup</Link></p> : 
             <div>
               <div>
+              <h4 className="m-3">
+                <Link to="/create">Create A Budget</Link>
+              </h4>
                 {
                   test(this.state.budgets)
                 }
               </div>
-              <Link to="/create">Create A Budget</Link>
+
             </div>
           }
         </div>

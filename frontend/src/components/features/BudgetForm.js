@@ -116,8 +116,8 @@ class BudgetForm extends Component {
 
     return (
       <div>
-        <Navbar />
-        <div className="form">
+        <Navbar loggedInStatus={this.props.loggedInStatus} />
+        <div className="form m-3">
           <Form onSubmit={this.handleSubmit}>
             <Form.Group controlId="budgetForm.Input1">
               <Form.Label>Budget Name</Form.Label>
