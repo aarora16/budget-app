@@ -32,7 +32,7 @@ class Home extends Component {
       .catch(error => console.log(error))
     }
 
-    const test = (budgets) => {
+    const createBudgets = (budgets) => {
       return (
         <>
           {budgets.map(budget => (
@@ -54,14 +54,14 @@ class Home extends Component {
 
           {
             !this.props.loggedInStatus ?
-            <p className="m-3">Please <Link to="/login">Login</Link> or <Link to="Signup">Signup</Link></p> : 
+            <p className="m-3">Please <Link to="/login">Login</Link> or <Link to="signup">Signup</Link></p> : 
             <div>
               <div>
               <h4 className="m-3">
                 <Link to="/create">Create A Budget</Link>
               </h4>
                 {
-                  test(this.state.budgets)
+                  createBudgets(this.state.budgets)
                 }
               </div>
 
