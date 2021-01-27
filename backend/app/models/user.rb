@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :budgets, through: :user_budgets
+  has_many :user_budgets
+
   has_secure_password
 
   validates :username, presence: true
